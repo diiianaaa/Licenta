@@ -1,0 +1,393 @@
+@extends('admin.admin_master')
+ @section('admin')
+ 
+ <!-- header area -->
+ <header class="header_area">
+                <!-- logo -->
+                <div class="sidebar_logo">
+                    <a href="index.html">
+  <img src="    {{ asset('panel/assets/images/logo.png') }} " alt="" class="img-fluid logo1">
+   <img src="    {{ asset('panel/assets/images/logo_small.png') }} " alt="" class="img-fluid logo2">
+                    </a>
+                </div>
+                <div class="sidebar_btn">
+                    <button class="sidbar-toggler-btn"><i class="fas fa-bars"></i></button>
+                </div>
+                <ul class="header_menu">
+                    <li><a href="{{route('admin.profile.edit')}}" class="search_btn" data-toggle="modal" data-target="#myModal"><i class="fas fa-search"></i></a>
+                        <div class="modal fade search_box" id="myModal">
+                              <button type="button" class="close m-2 text-white float-right" data-dismiss="modal">&times;</button>
+                              <form action="#" class="modal-dialog modal-lg">
+                                
+                                <div class="modal-content bg-transparent">
+                                      <!-- Modal body -->
+                                      <div class="modal-body">
+                                        <input class="form-control bg-transparent text-white form-control-lg"  type="text" placeholder="Search...">
+                                        <button class="btn btn-lg submit-btn" type="submit">Search</button>
+                                      </div>
+                                </div>
+                                 
+                              </form>
+                        </div>
+                    </li>
+                    <li><a data-toggle="dropdown" href="#"><i class="far fa-envelope"></i><span>4</span></a>
+                        <div class="dropdown_wrapper messages_item dropdown-menu dropdown-menu-right">
+                            <div class="dropdown_header">
+                                <p>you have 4 messages</p>
+                            </div>
+                            <ul class="dropdown_body nice_scroll scrollbar">
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Madelyn <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello Sam...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user2.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Melvin <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello jhon...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user3.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Olinda <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello jhon...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Johnson <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello Olinda...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user3.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Madelyn <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello Sam...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user2.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Melvin <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello jhon...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user3.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Olinda <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello jhon...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <img src="panel/assets/images/user1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-part">
+                                            <h6>Johnson <span><i class="far fa-clock"></i> today</span></h6>
+                                            <p>Hello Olinda...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown_footer">
+                                <a href="#">See All Messages</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" data-toggle="dropdown"><i class="far fa-bell"></i><span>9</span></a>
+                        <div class="dropdown_wrapper notification_item dropdown-menu dropdown-menu-right">
+                            <div class="dropdown_header">
+                                <p>You have 9 notifications</p>
+                            </div>
+                            <ul class="dropdown_body scrollbar nice_scroll">
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-success"><i class="fas fa-users"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p>5 new members joined</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-danger"><i class="fas fa-exclamation-triangle"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p> Very long description here that may...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-success"><i class="fas fa-cart-plus"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p> 25 sales made</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-warning"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p> You changed your username</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-success"><i class="fas fa-users"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p>5 new members joined</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-danger"><i class="fas fa-exclamation-triangle"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p> Very long description here that may...</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-success"><i class="fas fa-cart-plus"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p> 25 sales made</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img-part">
+                                            <span class="text-warning"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <div class="text-part">
+                                            <p> You changed your username</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown_footer">
+                                <a href="#">view All</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a data-toggle="dropdown" href="#"><i class="far fa-user"></i></a>
+                            <div class="user_item dropdown-menu dropdown-menu-right">
+                                <div class="admin">
+                                    <a href="#" class="user_link"><img src="panel/assets/images/admin.jpg" alt=""></a>
+                                </div>
+                            <ul>
+                                
+                                <li><a href="{{route('admin.profile')}}"><span><i class="fas fa-user"></i></span> User Profile</a></li>
+                                <li><a href=" "><span><i class="fas fa-cogs"></i></span>  Password Change</a></li>
+                                <li>
+
+                                    <a href="{{ route('admin.logout') }}"><span><i class="fas fa-unlock-alt"></i></span> Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+
+                        <a class="responsive_menu_toggle" href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </header><!-- / header area -->
+            <!-- sidebar area -->
+            <aside class="sidebar-wrapper ">
+              <nav class="sidebar-nav">
+                 <ul class="metismenu" id="menu1">
+                    <li class="single-nav-wrapper">
+                        <a href="index.html" class="menu-item">
+                            <span class="left-icon"><i class="fas fa-home"></i></span>
+                            <span class="menu-text">home</span>
+                        </a>
+                      </li>
+                    <li class="single-nav-wrapper">
+                          <a class="menu-item" href="fomrs_editor_ch.html" aria-expanded="false">
+                            <span class="left-icon"><i class="far fa-edit"></i></span>
+                              <span class="menu-text">Forms</span>
+                          </a>
+                      </li>
+                      <li class="single-nav-wrapper">
+                          <a class="has-arrow menu-item" href="#" aria-expanded="false">
+                            <span class="left-icon"><i class="fas fa-table"></i></span>
+                              <span class="menu-text">table</span>
+                          </a>
+                            <ul class="dashboard-menu">
+                              <li><a href="basic_table.html">Basic table</a></li>
+                              <li><a href="data_table.html">data table</a></li>
+                            </ul>
+                      </li>
+                      <li class="single-nav-wrapper">
+                          <a class="has-arrow menu-item" href="#" aria-expanded="false">
+                            <span class="left-icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="menu-text">Charts</span>
+                          </a>
+                            <ul class="dashboard-menu">
+                              <li><a href="chart-float.html">Float Chart</a></li>
+                              <li><a href="chart-float.html">Float Chart</a></li>
+                              <li><a href="chart-float.html">Float Chart</a></li>
+                           </ul>
+                      </li>
+                      <li class="single-nav-wrapper">
+                          <a class="has-arrow menu-item" href="#" aria-expanded="false">
+                            <span class="left-icon"><i class="fas fa-sort-alpha-down-alt"></i></span>
+                            <span class="menu-text">UI Elements</span>
+                          </a>
+                            <ul class="dashboard-menu">
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="button.html">Buttons</a></li>
+                                <li><a href="notification.html">Notification</a></li>
+                                <li><a href="panels.html">Panels</a></li>
+                                <li><a href="tabs.html">Tab</a></li>
+                                <li><a href="modals.html">Modals</a></li>
+                                <li><a href="progressbars.html">Progressber</a></li>
+                                <li><a href="list.html">List View</a></li>
+                                <li><a href="icheck_toggle_pagination.html">iCheck, Toggle</a></li>
+                                <li><a href="label-badge-alert.html">labels, Badges</a></li>
+                                <li><a href="treeview.html">Tree View</a></li>
+                           </ul>
+                      </li>
+                      <li class="single-nav-wrapper">
+                          <a class="has-arrow menu-item" href="#" aria-expanded="false">
+                            <span class="left-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="menu-text">Maps</span>
+                          </a>
+                          <ul class="dashboard-menu">
+                            <li><a href="#">Amcharts Maps</a></li>
+                            <li><a href="#">Data Maps</a></li>
+                            <li><a href="#">Jvector Maps</a></li>
+                            <li><a href="#">Google map</a></li>
+                            <li><a href="#">Snazzy Map</a></li>
+                          </ul>
+                      </li>
+                    
+                   
+                      
+                     
+                    </ul>
+              </nav>
+            </aside><!-- /sidebar Area-->
+
+
+         
+
+
+  
+<div class="content_wrapper">
+    <!--middle content wrapper-->
+
+    @if(Session::has('error'))
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong> {{session::get('error')}}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
+
+                    <h3> 
+                       Login Admin Name : {{ Auth::guard('admin')->user()->name }}
+                  
+                    </h3> 
+
+    <div class="middle_content_wrapper">
+
+    <div class="box box-widget widget-user">
+					<!-- Add the bg color to the header using any of the bg-* classes -->
+					<div class="widget-user-header bg-black">
+					  <h3 class="widget-user-username"></h3>
+
+                      <a href="{{route('admin.profile.edit')}}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Edit profile</a>
+
+					  <h6 class="widget-user-desc"></h6>
+					</div>
+					<div class="widget-user-image">
+
+					  <img class="rounded-circle" src="{{ (!empty($adminData->profile_photo_path))? 
+                        url('upload/admin_images/'.$adminData->profile_photo_path):url('upload/no_image.jpg') }}" alt="User Avatar">
+					</div>
+					<div class="box-footer">
+					  <div class="row">
+						<div class="col-sm-4">
+						  <div class="description-block">
+							<h5 class="description-header">12K</h5>
+							<span class="description-text">FOLLOWERS</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+						<div class="col-sm-4 br-1 bl-1">
+						  <div class="description-block">
+							<h5 class="description-header">550</h5>
+							<span class="description-text">FOLLOWERS</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+						<div class="col-sm-4">
+						  <div class="description-block">
+							<h5 class="description-header">158</h5>
+							<span class="description-text">TWEETS</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+					  </div>
+					  <!-- /.row -->
+					</div>
+				  </div>
+
+    </div>
+
+@endsection
